@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="animated_form2.css">
+</head>
+<body>
+    <div id="curtains">
+        <button id="button">Button</button>
+        <div id="left_curtain"></div>
+        <div id="right_curtain"></div>
+    </div>
+    <script>
+        var button = document.getElementById('button');
+        var left_curtain = document.getElementById('left_curtain');
+        var right_curtain = document.getElementById('right_curtain');
+
+        button.addEventListener("click",function(){
+            left_curtain.style.transform='translateX(-600px)';
+            right_curtain.style.transform='translateX(600px)';
+            button.style.display='none';
+        })
+    </script>
+    <div id="main_page">
+        <form>
+            <h2>A long text</h2>
+            <input type="text" name="name">
+            <input type="submit" value="submit">
+        </form>
+    </div>
+</body>
+</html>
